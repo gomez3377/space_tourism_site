@@ -1,0 +1,142 @@
+@import 'config';
+@import 'utilities';
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $primary-font;
+    overflow: hidden;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    padding-left: 4rem;
+    height: fit-content;
+    img{
+        width: 48px ;
+        height: 48px;
+        margin-right: 4rem;
+    }
+    hr{
+        border:1px solid rgba($white,0.25);
+        width: 473px;
+        margin-right: -4rem;
+        
+    }
+}
+
+.header-nav{
+    height: 96px;
+    width: 830px;
+    padding: 2rem 0;
+   background-color: rgba($white,0.04);
+   backdrop-filter: blur(40.7772px);
+   a{
+    padding-bottom: 38px;
+    }
+    a:hover{
+        border-bottom: 3px solid rgba($white,0.5);
+
+    }
+    .nav-active{
+        border-bottom: 3px solid white;
+    }
+    span{
+        font-weight: 700;
+    }
+    
+}
+
+.destination-nav{
+   li{
+       padding-left: 0;
+       padding-right: 36px;
+   }
+}
+
+.App{
+    width: 100%;
+    height: 100vh;
+    // background-image: url('/src/assets/home/background-home-desktop.jpg'); 
+    // background-image: url('/src/assets/destination/background-destination-desktop.jpg');
+    // background-image: url('/src/assets/crew/background-crew-desktop.jpg');
+    background-image: url('/src/assets/technology/background-technology-desktop.jpg');
+    background-size: cover;
+}
+
+.page-number{
+    color: rgba($white,0.25);
+}
+
+
+.tech-page-content{
+    margin-top: 26px;
+
+}
+
+.tech-nav{
+    margin-top: 111px;
+    width: 80px;
+    margin-right: 80px;
+    ul{
+        flex-direction: column;
+    }
+    li{
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+    
+    
+}
+.tech-nav-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba($white,0.25);
+    background-color: $dark-color;
+    color: $white;
+    font-family: $primary-font;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 32px;
+}
+.tech-nav-btn:hover{
+   border:1px solid $white;
+}
+
+
+.active-2{
+    background-color: $white;
+    color:$dark-color
+}
+
+
+
+.tech-info {
+    margin-top: 111px;
+    width: 470px;
+    margin-right: 130px;
+    h5{
+        margin-bottom: 11px;
+    }
+    h3{
+        margin-bottom: 17px;
+    }
+    p{
+        color: $light-blue-color;
+        max-width: 444px;
+    }
+}
+.tech-img{
+    width: 515px;
+}

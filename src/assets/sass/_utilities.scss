@@ -1,0 +1,228 @@
+
+// Heading Styles
+
+
+// Navstyle
+
+ul{
+    display: flex;
+    align-items: center;
+    li{
+        font-family: $tetriary-font;
+        text-transform: uppercase;
+        font-weight: 400;
+      color: $white;
+      padding: 0 48px;
+      list-style-type: none;
+      letter-spacing: 2.7px;
+      font-size: 1rem;
+    }
+}
+
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+
+
+
+h1{
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $white;
+    font-size: 150px;
+    line-height: 172px;
+    text-transform: uppercase;
+}
+
+h2{
+    @extend h1;
+    font-size: 100px;
+    line-height: 114px;
+}
+h3{
+    @extend h1;
+    font-size: 56px;
+    line-height: 64.18px;
+}
+h4{
+    @extend h1;
+    font-size: 32px;
+    line-height: 36.67px;
+}
+h5{
+    @extend h1;
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: 4.72px;
+    font-family: $tetriary-font;
+    color: $light-blue-color;
+}
+
+.subheading-1{
+    @extend h1;
+    font-size: 28px;
+    line-height: 32px;
+}
+.subheading-2{
+    @extend h5;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+}
+
+p{
+    font-family: $secondary-font;
+    font-size: 18px;
+    color: $white;
+    line-height: 32px;
+}
+main{
+    max-width: 75%;
+    margin: 0 auto;
+    
+}
+
+.homepage-main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 131px;
+    .right-side-content{
+        margin-top:15rem;
+        width: 274px;
+        height: 274px;
+    }
+    .left-side-content{
+        margin-top:10rem;
+        max-width: 450px;
+    }
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    width: fit-content;
+   
+
+}
+
+.page-content{
+    .left-side-content{
+        width: 445px;
+        margin-top: 97px;
+        margin-right: 167px;
+    }
+    .right-side-content{
+        width: 445px;
+        margin-top: 64px;
+        h2{
+            margin-top: 37px;
+            margin-bottom: 14px;
+        }
+        p{
+            margin-bottom: 54px;
+        }
+        hr{
+            border: 1px solid #383B4B;
+        }
+        .destination-facts{
+            display: flex;
+            margin-top: 28px;
+            .distance{
+                width: 143px;
+                margin-right: 79px;
+            }
+            .subheading-2{
+                margin-bottom: 12px;
+            }
+        }
+        
+    }
+}
+
+.crew-page-content{
+    .left-side-content{
+        margin-top: 28px;
+        margin-right: 81px;
+        margin-bottom: 94px;
+        h5{
+            margin-bottom: 154px;
+        }
+        h4{
+            margin-bottom: 15px;
+            width: 448px;
+        }
+        h3{
+            margin-bottom: 27px;
+        }
+        p{
+            margin-bottom: 120px;
+            color: $light-blue-color;
+            width: 444px;
+        }
+    }
+    .right-side-content{
+        margin-top: 14px;
+        max-width: 568px;
+        height: 100%;
+        img{
+            object-fit: contain;
+        }
+    }
+}
+
+.crew-nav{
+    ul{
+        justify-content: flex-start;
+    }
+    li{
+        padding: 0;
+        padding-right: 24px;
+        
+    }
+    
+}
+
+.crew-nav-btn{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba($white,0.17);
+}
+.crew-nav-btn:hover{
+    background-color: rgba($white,0.5);
+}
+
+.active{
+    background-color: $white;
+}
+
+
+button{
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+.home-button{
+    @extend button;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $white;
+    letter-spacing: 2px;
+    font-size: 32px;
+    font-family: $primary-font;
+}
+.destination-btn{
+    @extend button;
+    background-color: transparent;
+    color: $white;
+    font-family: $tetriary-font;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+}
