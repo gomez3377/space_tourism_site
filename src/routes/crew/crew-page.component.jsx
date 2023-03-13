@@ -1,9 +1,9 @@
-import React from "react";
-import crewMember from '../assets/crew/image-douglas-hurley.png'
+import { Fragment } from 'react'
+import crewMember from '../../assets/crew/image-douglas-hurley.png'
 
 const CrewPage = () => {
   return (
-    <main>
+    <Fragment>
       <section className="crew-page-content">
         <div className="left-side-content">
       <h5><span className="page-number">02</span> Meet Your Crew</h5>
@@ -27,8 +27,8 @@ const CrewPage = () => {
             <img src={crewMember} alt="crew-member" />
         </div>
       </section>
-    </main>
-  );
-};
+    </Fragment>
+  )
+}
 
-export default CrewPage;
+export default CrewPage

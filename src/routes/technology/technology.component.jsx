@@ -1,5 +1,5 @@
 import React from "react";
-import techImg from "../assets/technology/image-launch-vehicle-portrait.jpg";
+
 const TechnologyPage = () => {
   return (
     <main>
@@ -32,7 +32,7 @@ const TechnologyPage = () => {
           </p>
         </div>
         <div className="tech-img">
-          <img src={techImg} alt="tech-img" />
+          {/* <img src={techImg} alt="tech-img" /> */}
         </div>
       </section>
     </main>

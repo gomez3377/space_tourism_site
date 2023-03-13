@@ -1,27 +1,24 @@
-import { useState } from 'react'
-import '../css/App.css'
-import DestinationPage from './components/DestinationPage'
-import HomePage from './components/HomePage'
-import Header from './components/Header'
-import CrewPage from './components/CrewPage'
-import TechnologyPage from './components/TechnologyPage'
+import { useState } from "react";
+import "./index.scss";
+import { Routes, Route } from "react-router-dom";
+import DestinationPage from "./routes/destination/destination.component";
+import HomePage from "./routes/home/home.component";
+import CrewPage from "./routes/crew/crew-page.component";
+import TechnologyPage from './routes/technology/technology.component'
+import Navigation from "./routes/navigation/navigation.component";
 
-
-function App() {
-const [page, setPage] = useState([{
-  page: "Homepage",
-  pageOn: true
-}])
-
+const App = () => {
   return (
-    <div className='App'>
-       <Header />
-    {/* <HomePage /> */}
-    {/* <DestinationPage /> */}
-    {/* <CrewPage /> */}
-    <TechnologyPage />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<HomePage />} />
+        <Route path="destination" element={<DestinationPage />} />
+        <Route path="crew" element={<CrewPage />} />
+        <Route path="technology" element={<TechnologyPage/>} />
+      </Route>
+
+    </Routes>
+  );
 }
 
-export default App
+export default App;

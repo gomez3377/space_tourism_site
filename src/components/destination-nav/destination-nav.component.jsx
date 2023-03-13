@@ -1,4 +1,5 @@
 import React from 'react'
+import './destination-nav.styles.scss'
 
 const DestinationNavBar = () => {
   return (

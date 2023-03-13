@@ -1,10 +1,11 @@
 import React from "react";
-import moon from "../assets/destination/image-moon.png";
-import DestinationNavBar from "./DestinationNavBar";
+import moon from "../../assets/destination/image-moon.png";
+import DestinationNavBar from "../../components/destination-nav/destination-nav.component";
+import './destination.styles.scss'
 const DestinationPage = () => {
   return (
-    <main>
-      <section className="destination-page-content">
+  
+      <section className="destination-content">
       <h5>
         <span className="page-number">01</span> Pick Your Destination
       </h5>
@@ -34,7 +35,7 @@ const DestinationPage = () => {
 
         </div>
       </section>
-    </main>
+   
   );
 };
 

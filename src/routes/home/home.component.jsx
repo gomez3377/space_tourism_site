@@ -1,11 +1,13 @@
-import React from "react";
 
+import { Fragment } from "react";
+import './home.styles.scss'
 
 const HomePage = () => {
   return (
-    <main className="homepage-main">
+    <Fragment>
      
-     
+     <div className="homepage">
+
           
         <div className="left-side-content">
 
@@ -22,7 +24,8 @@ const HomePage = () => {
             <button className="home-button">Explore</button>
           </div>
      
-    </main>
+     </div>
+    </Fragment>
   );
 };
 
