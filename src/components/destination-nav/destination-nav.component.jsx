@@ -1,14 +1,19 @@
-import React from 'react'
+
+import { useContext } from 'react'
+import { DataContext } from '../../context/data.context'
+import DestinationTab from '../destination-tabs/destination-tab.component'
 import './destination-nav.styles.scss'
 
+
+
 const DestinationNavBar = () => {
+  const {destinations} = useContext(DataContext)
+
+
   return (
    <nav className='destination-nav'>
        <ul>
-           <li><button className='destination-btn'>Moon</button></li>
-           <li><button className='destination-btn'>Mars</button></li>
-           <li><button className='destination-btn'>Europa</button></li>
-           <li><button className='destination-btn'>Titan</button></li>
+           {destinations.map(destination => <DestinationTab destination={destination} />)}
        </ul>
    </nav>
   )
