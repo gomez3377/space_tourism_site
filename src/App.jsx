@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import "./index.scss";
 import { Routes, Route } from "react-router-dom";
 import DestinationPage from "./routes/destination/destination.component";
@@ -7,7 +7,10 @@ import CrewPage from "./routes/crew/crew-page.component";
 import TechnologyPage from './routes/technology/technology.component'
 import Navigation from "./routes/navigation/navigation.component";
 
+
 const App = () => {
+
+
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
