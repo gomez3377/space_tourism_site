@@ -1,11 +1,12 @@
 
 import { Fragment } from "react";
+import BackgroundImage from "../../components/background-image/background-image.component";
 import './home.styles.scss'
 
 const HomePage = () => {
   return (
     <Fragment>
-     
+     <BackgroundImage />
      <div className="homepage">
 
           
