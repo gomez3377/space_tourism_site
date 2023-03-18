@@ -8,10 +8,7 @@ const DestinationTab = ({destination}) => {
     const switchDestinationHandler = () => setCurrentDestination(destination)
     const {name} = destination
   return (
-      <li>
-
     <button onClick={switchDestinationHandler}>{name}</button>
-      </li>
   )
 }
 

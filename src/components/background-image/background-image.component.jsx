@@ -2,6 +2,8 @@ import { crewBackgroundImages } from "../../assets/crew/crew-member-image";
 import { techBackgroundImages } from "../../assets/technology/technology-images";
 import { destinationBackgroundImages } from "../../assets/destination/destination-image-files";
 import homeBackgroundDesktop from "../../assets/home/background-home-desktop.jpg";
+import { BackgroundDesktopImage } from "./background-image.styles";
+
 
 const { crewBackgroundDesktop, crewBackgroundMobile, crewBackgroundTablet } =
   crewBackgroundImages;
@@ -36,8 +38,11 @@ const displayBackground = (url) => {
   }
 };
 
+
+
+
 const BackgroundImage = ({url}) => {
-  return <img src={displayBackground(url)} alt="background-image" />;
+  return <BackgroundDesktopImage src={displayBackground(url)} alt="background-image" />;
 };
 
 export default BackgroundImage;

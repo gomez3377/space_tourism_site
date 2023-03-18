@@ -1,4 +1,4 @@
-import Button from "../button/button.component"
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component"
 import { nanoid } from "nanoid"
 import { useContext } from "react"
 import { DataContext } from "../../context/data.context"
@@ -13,7 +13,7 @@ const TechNav = () => {
 
   return (
     <div> 
-    {technology.map((tech, index) => <Button key={nanoid()} onClick={() => setCurrentTech(tech) }>{index + 1}</Button>)}
+    {technology.map((tech, index) => <Button key={nanoid()} buttonType={BUTTON_TYPE_CLASSES.techButton} onClick={() => setCurrentTech(tech) }>{index + 1}</Button>)}
   </div>
   )
 }

@@ -1,21 +1,23 @@
 
 import { useContext } from 'react'
 import { DataContext } from '../../context/data.context'
-import DestinationTab from '../destination-tabs/destination-tab.component'
-import './destination-nav.styles.scss'
+import Button from '../button/button.component'
+import { BUTTON_TYPE_CLASSES } from '../button/button.component'
+import { nanoid } from 'nanoid'
+import './destination-nav.styles.jsx'
+import { DestinationNavBarContainer } from './destination-nav.styles.jsx'
 
 
 
 const DestinationNavBar = () => {
-  const {destinations} = useContext(DataContext)
+  const {currentDestination,destinations, setCurrentDestination} = useContext(DataContext)
 
 
   return (
-   <nav className='destination-nav'>
-       <ul>
-           {destinations.map(destination => <DestinationTab destination={destination} />)}
-       </ul>
-   </nav>
+   <DestinationNavBarContainer>
+           {destinations.map(destination => <Button className={destination === currentDestination && "active"}
+            buttonType={BUTTON_TYPE_CLASSES.destinationTab} key={nanoid()} onClick={() => setCurrentDestination(destination)} >{destination.name}</Button>)}
+   </DestinationNavBarContainer>
   )
 }
 

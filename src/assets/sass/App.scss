@@ -16,18 +16,11 @@ body{
 
 
 
-.destination-nav{
-   li{
-       padding-left: 0;
-       padding-right: 36px;
-   }
-}
 
 
 
-.page-number{
-    color: rgba($white,0.25);
-}
+
+
 
 
 .tech-page-content{
@@ -54,14 +47,7 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 1px solid rgba($white,0.25);
-    background-color: $dark-color;
-    color: $white;
-    font-family: $primary-font;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    font-size: 32px;
+    
 }
 .tech-nav-btn:hover{
    border:1px solid $white;

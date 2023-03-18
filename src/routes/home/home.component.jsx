@@ -2,7 +2,8 @@
 import { Fragment } from "react";
 import BackgroundImage from "../../components/background-image/background-image.component";
 import './home.styles.scss'
-
+import Button from "../../components/button/button.component";
+import { BUTTON_TYPE_CLASSES } from "../../components/button/button.component";
 const HomePage = () => {
   return (
     <Fragment>
@@ -22,7 +23,7 @@ const HomePage = () => {
         </p>
         </div>
           <div className="right-side-content">
-            <button className="home-button">Explore</button>
+            <Button buttonType={BUTTON_TYPE_CLASSES.homeButton}>Explore</Button>
           </div>
      
      </div>
