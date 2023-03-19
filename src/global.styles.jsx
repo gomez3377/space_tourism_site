@@ -48,7 +48,7 @@ h4{
     line-height: 36.67px;
 }
 h5{
-    font-family: "Bellefair", serif;
+    
     font-weight: 400;
     color: white;
     text-transform: uppercase;
@@ -60,7 +60,7 @@ h5{
 }
 
 .subheading-1{
-    font-family: "Bellefair", serif;
+    font-family: "Barlow Condensed", serif;
     font-weight: 400;
     color: white;
     text-transform: uppercase;
@@ -68,7 +68,7 @@ h5{
     line-height: 32px;
 }
 .subheading-2{
-    font-family: "Bellefair", serif;
+    font-family: "Barlow Condensed", serif;
     font-weight: 400;
     color: white;
     text-transform: uppercase;
@@ -82,6 +82,11 @@ p{
     font-size: 18px;
     color: white;
     line-height: 32px;
+}
+
+img{
+    width:100%;
+    height:100%;
 }
 
 

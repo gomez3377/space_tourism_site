@@ -3,6 +3,7 @@ import BackgroundImage from '../../components/background-image/background-image.
 import CrewImageComponent from '../../components/crew-image/crew-image.component'
 import CrewMemberInfo from '../../components/crew-member-info/crew-member-info.component'
 import { DataContext } from '../../context/data.context'
+import { CrewPageContent } from './crew-page.styles'
 
 
 const CrewPage = () => {
@@ -11,9 +12,13 @@ const CrewPage = () => {
   return (
     <>
     <BackgroundImage url='crew' />
-      <h5><span className="page-number">02</span> Meet Your Crew</h5>
+    <CrewPageContent>
+
+
+
           <CrewMemberInfo currentCrewMember={currentCrewMember} />
           <CrewImageComponent url={images.png} name={name}/>
+    </CrewPageContent>
     </>
   )
 }

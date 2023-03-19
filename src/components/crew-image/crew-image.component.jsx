@@ -1,4 +1,5 @@
 import { crewImages } from "../../assets/crew/crew-member-image";
+import { CrewMemberImg } from "./crew-image.style";
 
 const {
   douglasHurleyPng,
@@ -57,7 +58,7 @@ const selectImage = (url) => {
 };
 
 const CrewImageComponent = ({url, name}) => {
-  return <img src={selectImage(url)} alt={name} />;
+  return <CrewMemberImg src={selectImage(url)} alt={name} />;
 };
 
 export default CrewImageComponent;

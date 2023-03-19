@@ -1,4 +1,5 @@
 import { techImages } from "../../assets/technology/technology-images"
+import { TechImageContainer } from "./tech-image.styles"
 
 const {launchVehicleLandscape, launchVehiclePortrait, spaceCapsuleLandscape, spaceCapsulePortrait, spaceportLandscape, spaceportPortrait} = techImages
 
@@ -44,7 +45,7 @@ const setImage = (url) => {
 
 const TechImage = ({name, url}) => {
   return (
-    <img src={setImage(url)} alt={name} />
+    <TechImageContainer src={setImage(url)} alt={name} />
   )
 }
 
