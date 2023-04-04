@@ -17,7 +17,7 @@ export const HomeButton = styled(DefaultButton)`
 `;
 
 export const DestinationTab = styled(DefaultButton)`
-  border: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.7px;
@@ -56,7 +56,7 @@ export const TechButton = styled(DefaultButton)`
   border-radius: 50%;
   font-size: 32px;
   &:hover {
-    border: 1 px solid white;
+    border: 1px solid white;
   }
   &.active {
     border: none;

@@ -1,48 +1,69 @@
-import {createContext, useState} from "react";
+import { createContext, useState } from "react";
 
-import DATA from '../data.json'
+import DATA from "../data.json";
 
-const setDefaultData = (array) =>  array[0]
+const setDefaultData = (array) => array[0];
 
 export const DataContext = createContext({
-    technology:[],
-    destinations:[],
-    crew:[],
-    currentDestination:{},
-    currentTech:{},
-    currentCrewMember:{},
-    setCurrentCrewMember:() => {},
-    setCurrentDestination:() => {},
-    setCurrentTech: () => {}
-    
-    
-    
-})
+  pages: [],
+  technology: [],
+  destinations: [],
+  crew: [],
+  currentDestination: {},
+  currentTech: {},
+  currentCrewMember: {},
+  currentPage: "",
+  setCurrentCrewMember: () => {},
+  setCurrentDestination: () => {},
+  setCurrentTech: () => {},
+  setCurrentPage: () => {},
+});
 
+export const DataProvider = ({ children }) => {
+  const pages = [
+    {
+      name: "home",
+      link: "/",
+      pageNumber: "00",
+    },
+    { 
+      name: "destination", 
+      link: "/destination", 
+      pageNumber: "01" 
+    },
+    { name: "crew", 
+    link: "/crew", 
+    pageNumber: "02" 
+  },
+    { 
+      name: "technology", 
+      link: "/technology", 
+      pageNumber: "03" 
+    },
+  ];
 
+  const { technology, crew, destinations } = DATA;
+  const [currentDestination, setCurrentDestination] = useState(
+    setDefaultData(destinations)
+  );
+  const [currentTech, setCurrentTech] = useState(setDefaultData(technology));
+  const [currentCrewMember, setCurrentCrewMember] = useState(
+    setDefaultData(crew)
+  );
+  const [currentPage, setCurrentPage] = useState('home');
 
-export const DataProvider = ({children}) => {
-    
-    const {technology, crew, destinations} = DATA
-    const [currentDestination, setCurrentDestination ] = useState(setDefaultData(destinations))
-    const [currentTech, setCurrentTech ] = useState(setDefaultData(technology))
-    const [currentCrewMember, setCurrentCrewMember ] = useState(setDefaultData(crew))
-   
+  const value = {
+    pages,
+    technology,
+    crew,
+    destinations,
+    currentTech,
+    currentCrewMember,
+    currentDestination,
+    setCurrentCrewMember,
+    setCurrentDestination,
+    setCurrentTech,
+  };
 
-
-  
-
-    const value = {
-      technology,
-      crew,
-      destinations,
-      currentTech,
-      currentCrewMember,
-      currentDestination,
-      setCurrentCrewMember,
-      setCurrentDestination,
-      setCurrentTech
-    }
-
-    return(<DataContext.Provider value={value}>{children}</DataContext.Provider>)
-}
+  return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
+};
